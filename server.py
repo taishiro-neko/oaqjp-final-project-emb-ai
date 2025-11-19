@@ -23,9 +23,7 @@ def emotion_detection():
 
     if not dominant:
         return "Invalid text! Please try again!"
-
-
-    # Skip the dominant_emotion key
+    # Skip the dominant_emotion
     emotion_parts = [
         f"'{k}': {v}"
         for k, v in response.items()

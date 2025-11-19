@@ -11,9 +11,8 @@ def emotion_detector(text_to_analyse):
     if response.status_code == 400:  # blank input or some other error
         return {"dominant_emotion": None}
 
-
-	formatted_response = json.loads(response.text)
-	#pretty_json = json.dumps(formatted_response, indent=4)
+    formatted_response = json.loads(response.text)
+    #pretty_json = json.dumps(formatted_response, indent=4)
     #print (pretty_json)
 
     emotions = formatted_response["emotionPredictions"][0]["emotion"]
