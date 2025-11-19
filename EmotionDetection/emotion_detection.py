@@ -16,7 +16,8 @@ def emotion_detector(text_to_analyse):
     emotions["dominant_emotion"] = dominant_emotion
 
     if response.status_code == 200:
-    	return json.dumps(emotions, indent=4)
+        #return json.dumps(emotions, indent=4)
+        return emotions
 
     elif response.status_code == 500:
         return {}
