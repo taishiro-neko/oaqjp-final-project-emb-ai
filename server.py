@@ -21,6 +21,10 @@ def emotion_detection():
     response = emotion_detector(text_to_analyze)
     dominant = response["dominant_emotion"]
 
+    if not dominant:
+        return "Invalid text! Please try again!"
+
+
     # Skip the dominant_emotion key
     emotion_parts = [
         f"'{k}': {v}"
